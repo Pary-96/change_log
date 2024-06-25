@@ -3,4 +3,4 @@ def hello_world():
 
 
 def hello_github():
-    return "Hello github!"
+    return "Hello github Deployed in Confluence"
