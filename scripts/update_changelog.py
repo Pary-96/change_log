@@ -1,11 +1,10 @@
 import os
-import sys
 from github import Github
 
 
 def get_pr_details(pr_number):
     token = os.getenv("GITHUB_TOKEN")
-    repo_name = "change_log"
+    repo_name = os.getenv("GITHUB_REPOSITORY")  # Corrected to fetch owner/repo
     g = Github(token)
     repo = g.get_repo(repo_name)
     pr = repo.get_pull(pr_number)
